@@ -48,6 +48,29 @@ div.desc {
   display: table;
   clear: both;
 }
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 </style>
 </head>
 <body>
@@ -58,7 +81,7 @@ div.desc {
     <a target="_blank" href="">
       <img src="https://scontent.frba2-2.fna.fbcdn.net/v/t39.30808-6/293312077_147717697851471_3770714853494505716_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHx6pw2eLOGOd1-sBU4yMqmg-mdpf7DdUCD6Z2l_sN1QMZB1ahBgWfV7uDq5HIpf1c9k7p2oTXwe98J0R3v9pS6&_nc_ohc=XyfliYZczx8AX-qMZYk&_nc_ht=scontent.frba2-2.fna&oh=00_AT-xrXsNnugtcSimMUUGMkDzFeudXagaM0jbeqDNTopCsA&oe=62ECC599" alt="Cinque Terre" width="600" height="400">
     </a>
-    <div class="desc">Demon slayer test</div>
+    <div class="desc"><button onclick="on()">Demon slayer</button></div>
   </div>
 </div>
 
@@ -97,6 +120,20 @@ div.desc {
   <p>ms ghadi nqadoh inshalah 100%</p>
 </div>
 
+<div id="overlay" onclick="off()">
+  <div id="text"><iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100083416351895%2Fvideos%2F441111517910655%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></div>
+</div>
+
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 </body>
 </html>
 
